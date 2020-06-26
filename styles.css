@@ -1,0 +1,48 @@
+/** @format */
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	font-family: sans-serif;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	cursor: none; /*To remove initial Cursor */
+}
+.container {
+	height: 50vh;
+	display: flex;
+	justify-content: space-between;
+	background-color: aliceblue;
+}
+.image {
+	width: fit-content;
+}
+.text {
+	background-color: aliceblue;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2em;
+}
+h1 {
+	margin: 0;
+}
+
+.cursor-wrapper {
+	pointer-events: none; /*To make it able to interact with links (as z-index 100) */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	z-index: 100;
+}
+.cursor {
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	border-radius: 50%;
+	transform: translate(-25px, -25px);
+}

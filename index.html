@@ -1,0 +1,37 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles.css" />
+		<title>Custom Cursor</title>
+	</head>
+	<body>
+		<div class="cursor-wrapper">
+			<div class="cursor"></div>
+		</div>
+		<div class="container">
+			<div class="image">
+				<img src="https://source.unsplash.com/random" height="100%" alt="image" />
+			</div>
+			<div class="text">
+				<h1>Custom Cursor Demo</h1>
+				<p><a href="https://google.com">Im a link</a></p>
+				<p>Welcome to this Blog Post</p>
+			</div>
+		</div>
+
+		<script>
+			let clientX;
+			let clientY;
+			const innerCursor = document.querySelector(".cursor-wrapper");
+			// add listener to track the current mouse position
+			window.addEventListener("mousemove", (e) => {
+				innerCursor.style.top = e.clientY + "px";
+				innerCursor.style.left = e.clientX + "px";
+			});
+		</script>
+	</body>
+</html>
